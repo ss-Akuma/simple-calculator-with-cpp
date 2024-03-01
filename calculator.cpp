@@ -2,11 +2,31 @@
 #include <limits>
 using namespace std;
 
+float add(float num_1,float num_2){
+    float result = num_1 + num_2;
+    return result;
+}
+
+float subtraction(float num_1,float num_2){
+    float result = num_1 - num_2;
+    return result;
+}
+
+float multiply(float num_1,float num_2){
+    float result = num_1 * num_2;
+    return result;
+}
+
+float diversion(float num_1,float num_2){
+    float result = num_1 / num_2;
+    return result; 
+}
+
 int main(){
 
-    int num_2, num_1;
+    float num_2, num_1;
     char oprt;
-    int result;
+    float result;
 
     cout << "### Welcome to Simple Calculator ###" << endl;
 
@@ -42,24 +62,24 @@ int main(){
 
             switch (oprt){
                 case '+':
-                    result = num_1 + num_2;
+                    result = add(num_1,num_2);
                     cout << result << endl;
                     break;
                 
                 case '-':
-                    result = num_1 - num_2;
+                    result = subtraction(num_1,num_2);
                     cout << result << endl;
                     break;
 
                 case '*':
-                    result = num_1 * num_2;
+                    result = multiply(num_1,num_2);
                     cout << result << endl;
                     break;
 
                 case '/':
                     if (num_2 != 0)
                     {
-                    result = num_1 / num_2;
+                    result = diversion(num_1,num_2);
                     cout << result << endl;
                     
                     }else{
